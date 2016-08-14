@@ -13,7 +13,7 @@ html {
 }
 body {
 	@extend %extend1;
-	font-family: $font1;
+	font-family: Vazir;
 	@include font-rem($doc-font-size);
 	color: $color_tuatara;
 	background-color: $bodycolor;
@@ -23,6 +23,7 @@ body {
 	    background-image: none !important;
 		background: $white;
 	}
+	direction: rtl;
 }
 * {
 	box-sizing: border-box;
@@ -164,7 +165,8 @@ body {
 			@include border-radius(3px,3px,0,0);
 		}
 		&:hover {
-			background-color: darken($white,15);
+			background-color: darkcyan;
+			color: white;
 			box-shadow: 0 0 1px 0 rgba($color_shark,0.5);
 		}
 	}
@@ -191,6 +193,19 @@ header .entry-meta {
     width: 30%;
     float: right;
     text-align: right;
+
+    .twitter {
+			background-color: rgba(81,165,241,1);
+			color: white;
+		}
+		.facebook {
+			background-color: rgb(59, 89, 152);
+			color: white;
+		}
+		.gplus {
+			background-color: rgb(220, 74, 56);
+			color: white;
+		}
 }
 .feature {
     @include transition(.5s);

@@ -77,9 +77,40 @@
     font-weight:300;
 }
 .post-list {
+    ul {
+      border-bottom: 1px solid lightgray;
+      font-family: Vazir;
+    }
     .btn {
         @include font-rem(14);
     }
+}
+
+.posts-image {
+  width: 722px;
+  height: 288px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.date {
+  
+  direction: ltr;
+}
+
+.post-body {
+  
+  a {
+    color: #FF6969;
+    text-decoration: none;
+  }
+  a:hover {
+    color: olive;
+  }
 }
 
 // hr break

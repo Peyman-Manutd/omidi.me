@@ -30,6 +30,11 @@
 	font-weight: bold;
 	margin-bottom: 3rem;
 }
+.farsi-title {
+	font-family:$font4;
+	font-size:1.2rem;
+	font-weight:bolder;
+}
 
 // headings
 h3.title a {
@@ -40,7 +45,6 @@ h3.title a {
 // post list
 .post-list {
     text-align: right;
-    font-family: $font3;
 	ul {
 		list-style: none;
 		padding-left: 0;
