@@ -1,9 +1,10 @@
 # Site
 title:              Peyman Omidi
 fa_title:           پیمان امیدی
-bio:                'A PHP and Laravel Developer and also Manchester United fan'
-description:        "Peyman Omidi is PHP and Laravel Developer in Esfahan/Iran and Manchester United die hard fan <3"
-keywords:           "Peyman Omidi, Web Developer, blog, پیمان امیدی, توسعه دهنده وب, بلاگ"
+blog_title:         وبلاگ شخصی پیمان امیدی
+bio:                'PHP and Laravel Developer and also Manchester United fan'
+description:        "پیمان امیدی هستم. برنامه نویس PHP و فریموورک لاراول"
+keywords:           "بلاگ, وبلاگ, پیمان امیدی, توسعه دهنده وب, Peyman Omidi, PHP Developer, Laravel Developer, Blog"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
