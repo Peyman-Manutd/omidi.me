@@ -3,9 +3,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
     
-    <title>{% if page.title %}{{ site.fa_title }} &#8211; {% endif %}{{ site.title }}</title>
+    <title>{% if page.title %}{{ site.fa_title }} &#124; {{ page.title }} {% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="keywords" content="{% if page.tags %}{{ page.tags|join: ',' }}{% else %}{{ site.keywords }}{% endif %}" >
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords|join: ',' }}{% else %}{{ site.keywords }}{% endif %}" >
     <!-- Twitter Cards -->
     {% if page.feature %}{% capture feature %}{{ page.feature }}{% endcapture %}{% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
     <meta name="twitter:card" content="summary_large_image">
