@@ -1,4 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-08-15T15:44:22+04:30</updated><id>http://localhost:4000/</id><title>Peyman Omidi</title><subtitle>پیمان امیدی هستم. برنامه نویس PHP و فریموورک لاراول</subtitle><entry><title>آموزش نصب فریموورک لاراول</title><link href="http://localhost:4000/blog/getting-started-with-laravel/" rel="alternate" type="text/html" title="آموزش نصب فریموورک لاراول" /><published>2016-08-13T00:00:00+04:30</published><updated>2016-08-13T00:00:00+04:30</updated><id>http://localhost:4000/blog/getting-started-with-laravel</id><content type="html" xml:base="http://localhost:4000/blog/getting-started-with-laravel/">&lt;p&gt;سلام. راستش خیلی وقت بود که میخواستم بلاگم رو راه بندازم ولی متاسفانه زمان اجازه نمیداد. هدف اصلی من برای درست کردن بلاگ اینه که بتونم تجربه هام رو در زمینه برنامه نویسی در اختیار بقیه بزارم.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-09-05T12:56:47+04:30</updated><id>http://localhost:4000/</id><title>Peyman Omidi</title><subtitle>Peyman Omidi | وب سایت پیمان امیدی، برنامه نویس و توسعه دهنده وب</subtitle><entry><title>راه اندازی فریموورک لاراول با استفاده از Homestead</title><link href="http://localhost:4000/blog/laravel-homestead/" rel="alternate" type="text/html" title="راه اندازی فریموورک لاراول با استفاده از Homestead" /><published>2016-09-04T00:00:00+04:30</published><updated>2016-09-04T00:00:00+04:30</updated><id>http://localhost:4000/blog/laravel-homestead</id><content type="html" xml:base="http://localhost:4000/blog/laravel-homestead/">&lt;p&gt;در &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;پست قبلی&lt;/a&gt; نحوه نصب و راه اندازی فریموورک لاراول رو از طریق نصب &lt;a href=&quot;https://getcomposer.org/&quot; target=&quot;_blank&quot;&gt;Composer&lt;/a&gt; و اجرای اون روی نرم افزار های شبیه ساز سرور مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;Wamp Server&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Xampp&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Mamp&lt;/code&gt; و … دیدیم.
+در این پست آموزش راه اندازی فریموورک لاراول رو بوسیله &lt;a href=&quot;https://laravel.com/docs/5.3/homestead&quot; target=&quot;_blank&quot;&gt;Homestead&lt;/a&gt; یاد میگیریم. قبل از ادامه خوندن این پست، مطمئن بشین که &lt;code class=&quot;highlighter-rouge&quot;&gt;Composer&lt;/code&gt; روی سیستمتون نصب هست.&lt;/p&gt;
+
+&lt;p&gt;آموزش نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;composer&lt;/code&gt; رو میتونین از &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;اینجا&lt;/a&gt; بخونید.&lt;/p&gt;
+
+&lt;p&gt;برای کاربرانی که از ویندوز استفاده می کنن پیشنهاد میکنم که &lt;a href=&quot;https://git-for-windows.github.io&quot; target=&quot;_blank&quot;&gt;Git Bash&lt;/a&gt; رو نصب کنن. &lt;code class=&quot;highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt; یه Command Line هست که به ما اجازه میده دستورات &lt;code class=&quot;highlighter-rouge&quot;&gt;Unix&lt;/code&gt; رو اجرا کنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;laravel-homestead&quot;&gt;Laravel Homestead&lt;/h2&gt;
+
+&lt;p&gt;خب برای شروع یه توضیح بدم که &lt;a href=&quot;https://laravel.com/docs/5.3/homestead&quot; target=&quot;_blank&quot;&gt;Laravel Homestead&lt;/a&gt; چیه. 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Laravel Homestead&lt;/code&gt; یک &lt;code class=&quot;highlighter-rouge&quot;&gt;pre-package&lt;/code&gt; از &lt;a href=&quot;https://www.vagrantup.com&quot; target=&quot;_blank&quot;&gt;Vagrant Box&lt;/a&gt; هست که محیط توسعه ای در اختیار ما میگذاره که احتیاجی به نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt;، وب سرور یا هر نوع نرم افزار مربوط به سرور روی سیستممون نداریم. &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant&lt;/code&gt; به عنوان یک &lt;code class=&quot;highlighter-rouge&quot;&gt;Virtual Machine&lt;/code&gt; کار میکنه که درون اون پکیجی از نرم افزار های مورد نیاز قرار داره. لیستی از نرم افزار ها که در این پکیج قرار داره:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ubuntu 16.04&lt;/li&gt;
+  &lt;li&gt;Git&lt;/li&gt;
+  &lt;li&gt;PHP 7.0&lt;/li&gt;
+  &lt;li&gt;Nginx&lt;/li&gt;
+  &lt;li&gt;MySQL&lt;/li&gt;
+  &lt;li&gt;MariaDB&lt;/li&gt;
+  &lt;li&gt;SQlite3&lt;/li&gt;
+  &lt;li&gt;Postgres&lt;/li&gt;
+  &lt;li&gt;Composer&lt;/li&gt;
+  &lt;li&gt;Node (PM2, Bower, Grunt and Gulp)&lt;/li&gt;
+  &lt;li&gt;Redis&lt;/li&gt;
+  &lt;li&gt;Memcached&lt;/li&gt;
+  &lt;li&gt;Beanstalkd&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vagrant Box رو میتونین از &lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot; target=&quot;_blank&quot;&gt;اینجا&lt;/a&gt; دانلود کنید.&lt;/p&gt;
+
+&lt;p&gt;قبل از اجرای &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead&lt;/code&gt; نیاز داریم که حتما &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot; target=&quot;_blank&quot;&gt;VirtualBox&lt;/a&gt; یا &lt;a href=&quot;http://www.vmware.com/&quot; target=&quot;_blank&quot;&gt;VMWare&lt;/a&gt; نصب کنیم.&lt;/p&gt;
+
+&lt;p&gt;بعد از نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;Virtual Box/VMWare&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant&lt;/code&gt;، باید پکیچ &lt;a href=&quot;https://packagist.org/packages/laravel/homestead&quot; target=&quot;_blank&quot;&gt;Laravel/Homestead&lt;/a&gt; رو به &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant Box&lt;/code&gt; اضافه کنیم. اول وارد &lt;code class=&quot;highlighter-rouge&quot;&gt;home directory&lt;/code&gt; میشیم و این دستور رو اجرا میکنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    vagrant box add laravel/homestead&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p class=&quot;notice&quot;&gt;توجه داشته باشید که این پکیج حجم بالایی داره (در حدود ۱ GB) و ممکنه با توجه به سرعت اینترنت شما، زمان زیادی طول بکشه.&lt;/p&gt;
+
+&lt;p&gt;بعد از تموم شدن مراحل نصب، ما &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;VirtualBox/VMWare&lt;/code&gt; رو روی سیستممون داریم. حالا کاری که باید بکنیم اینه که یه دایرکتوری جدید برای &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead&lt;/code&gt; ایجاد کنیم. برای مثال من در &lt;code class=&quot;highlighter-rouge&quot;&gt;home directory&lt;/code&gt;، دایرکتوری جدیدی با نام &lt;code class=&quot;highlighter-rouge&quot;&gt;www&lt;/code&gt; ایجاد کردم و بعد از وارد شدن به این دایرکتوری، دستور پایین رو برای نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead&lt;/code&gt; اجرا میکنیم&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    git clone https://github.com/laravel/homestead.git Homestead&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;همچنین درون دایرکتوری &lt;code class=&quot;highlighter-rouge&quot;&gt;www&lt;/code&gt; یک دایرکتوری جدید مثلا با نام &lt;code class=&quot;highlighter-rouge&quot;&gt;sites&lt;/code&gt; ایجاد میکنیم که تمام سایت هایی که ایجاد میکنیم در اینجا قرار داره.
+بعد از اینکه دستور بالا رو اجرا کردیم، در دایرکتوری &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead&lt;/code&gt;، این دستور رو اجرا میکنیم&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    bash init.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;با اجرای این دستور، دایرکتوری جدیدی با نام &lt;code class=&quot;highlighter-rouge&quot;&gt;homestead.&lt;/code&gt; در &lt;code class=&quot;highlighter-rouge&quot;&gt;home directory&lt;/code&gt; سیستمتون ساخته میشه. درون این دایرکتوری، فایلی به نام &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead.yaml&lt;/code&gt; وجود داره که باید اونو ادیت کنیم.
+برای باز کردن چنین فایلایی در Command Line چندین راه وجود داره،
+یکی از راه های مرسوم استفاده از دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;nano&lt;/code&gt; هست.
+روش بهتر و کاربردی تر باز کردن فایل در کد ادیتور هست. مثلا برای باز کردن فایل بوسیله کد ادیتور &lt;a href=&quot;https://www.sublimetext.com&quot; target=&quot;_blank&quot;&gt;Sublime Text&lt;/a&gt;، با استفاده از دستور پایین میتونین دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;sublime&lt;/code&gt; رو به Command Line سیستمتون اضافه کنید&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;ln -s &quot;/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl&quot; /usr/local/bin/sublime&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;حالا میتونیم با استفاده از این دستور، فایل &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead.yaml&lt;/code&gt; رو درون &lt;code class=&quot;highlighter-rouge&quot;&gt;Sublime Text&lt;/code&gt; باز کنیم (قبل از اجرای دستور وارد دایرکتوری &lt;code class=&quot;highlighter-rouge&quot;&gt;homestead.&lt;/code&gt; بشید)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    sublime Homestead.yaml&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;بعد از باز کردن فایل، قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;folders&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;sites&lt;/code&gt; رو مثل عکس پایین تغییر میدیم&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/homestead-yaml.png&quot; alt=&quot;Edit Homestead.yaml file&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;در صورتی که &lt;code class=&quot;highlighter-rouge&quot;&gt;SSh Key&lt;/code&gt; ایجاد نکردید، از طریق این دستور میتونید این کار رو انجام بدید&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    ssh-keygen -t rsa -C &quot;you@homestead&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;هنگامی که &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Key&lt;/code&gt; ایجاد شد. آدرس کلید رو در قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;authorize&lt;/code&gt; قرار بدید.&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;توجه کنید که در قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;folders&lt;/code&gt; حتما دایرکتوری پایین &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; یکسان باشن و همچنین در قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;sites&lt;/code&gt; در &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; آدرس &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; که برای پروژمون استفاده کنیم رو مینویسیم و در &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; آدرس &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; پروژه&lt;/p&gt;
+
+&lt;p&gt;بعد از ذخیره کردن فایل، وارد دایرکتوری &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead&lt;/code&gt; در &lt;code class=&quot;highlighter-rouge&quot;&gt;www&lt;/code&gt; میشیم و این دستور رو اجرا میکنیم و منتظر مشیشم تا &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant Box&lt;/code&gt; اجرا بشه&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/vagrant-up.png&quot; alt=&quot;Vagrant Up Laravel&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;همونطور که در قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;Forwarding Ports&lt;/code&gt; میبینیم، بعد از اجرای &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant&lt;/code&gt; پورت ها تغییر کردن:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTTP:        80 =&amp;gt; 8000&lt;/li&gt;
+  &lt;li&gt;HTTPS:        443 =&amp;gt; 44300&lt;/li&gt;
+  &lt;li&gt;MySQL:        3306 =&amp;gt; 33060&lt;/li&gt;
+  &lt;li&gt;PostgresSQL:  5432 =&amp;gt; 54320&lt;/li&gt;
+  &lt;li&gt;SSH/SFTP:     22 =&amp;gt; 2222&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;خب حالا باید &lt;code class=&quot;highlighter-rouge&quot;&gt;laravel.dev&lt;/code&gt; رو که توی &lt;code class=&quot;highlighter-rouge&quot;&gt;Homestead.yaml&lt;/code&gt; اضافه کردیم به ip address به اصطلاح &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; کنیم. برای اینکار در ترمینال وارد &lt;code class=&quot;highlighter-rouge&quot;&gt;home directory&lt;/code&gt; میشیم و این دستور رو اجرا میکنیم&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    sudo vi /etc/hosts/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt; هم مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;nano&lt;/code&gt; برای باز کردن این نوع فایل ها از طریق command line هست.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/map-url-to-ip-address.png&quot; alt=&quot;Mapping url to IP Address&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;همونطور که در تصویر بالا میبینیم &lt;code class=&quot;highlighter-rouge&quot;&gt;laravel.dev&lt;/code&gt; رو به ip &lt;code class=&quot;highlighter-rouge&quot;&gt;127.0.0.1&lt;/code&gt;، &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; میکنیم.&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;برای ذخیره کردن فایلی که با دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt; باز میکنیم، کلید &lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt; میزنیم و &lt;code class=&quot;highlighter-rouge&quot;&gt;wq:&lt;/code&gt; رو تایپ و اینتر میکنیم.&lt;/p&gt;
+
+&lt;p&gt;بعد از اینکه ip رو به پروژمون &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; کردیم، وارد مسیر &lt;code class=&quot;highlighter-rouge&quot;&gt;/www/Homestead/&lt;/code&gt; میشیم و این دستور رو اجرا میکنیم&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    vagrant provision&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;خب آخرین مرحله قبل از اینکه پروژمون رو ایجاد کنیم، اجرای این دستور هست&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    composer global require &quot;laravel/installer&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;با اجرای این دستور، دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;laravel&lt;/code&gt; بصورت &lt;code class=&quot;highlighter-rouge&quot;&gt;global&lt;/code&gt; روی سیستم ما قرار میگیره.&lt;/p&gt;
+
+&lt;p&gt;خب برای ایجاد پروژه جیدی براحتی میتونیم با استفاده از دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;laravel new ProjectName&lt;/code&gt; این کار رو انجام بدیم. فقط قبل از اون، وارد دایرکتوری &lt;code class=&quot;highlighter-rouge&quot;&gt;/www/sites/&lt;/code&gt; میشیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    laravel new laravel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;منتظر میشیم تا دانلود پکیج های مورد نیاز تموم بشه. بعد از اون مرورگرومون رو باز میکنیم و &lt;code class=&quot;highlighter-rouge&quot;&gt;laravel.dev:8000&lt;/code&gt; رو در آدرس بار وارد میکنیم 😍&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/laravel.png&quot; alt=&quot;Laravel Homestead up and running&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;همون طور که میبینیم، نسبت به روش قبل، این روش url بسیار کوتاه تر و به اصطلاح تمیزتری داره.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;در آموزش بعدی روش آخر راه اندازی فریموورک لاراول رو با استفاده از &lt;a href=&quot;https://laravel.com/docs/5.3/valet&quot; target=&quot;_blank&quot;&gt;Valet&lt;/a&gt; بتون میگم که جدیدا معرفی شده و فقط برای کاربران &lt;code class=&quot;highlighter-rouge&quot;&gt;Mac&lt;/code&gt; هست. جالبی این روش این هست که هیچ احتیاجی به &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant&lt;/code&gt;، &lt;code class=&quot;highlighter-rouge&quot;&gt;Apache&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt; نداریم !!! 😳&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;خوشحال میشم نظراتتون رو بخونم. 😊&lt;/p&gt;
+
+&lt;p&gt;موفق باشید 👍🏻&lt;/p&gt;</content><category term="Laravel" /><category term="Homestead" /><category term="Vagrant" /><category term="Composer" /><category term="PHP" /><summary>Laravel Homestead یک pre-package از Vagrant Box هست که محیط توسعه ای در اختیار ما میگذاره که احتیاجی به نصب PHP، وب سرور یا هر نوع نرم افزار مربوط به سرور روی سیستممون نداریم. Vagrant به عنوان یک Virtual Machine کار میکنه که درون اون پکیجی از نرم افزار های مورد نیاز قرار داره</summary></entry><entry><title>آموزش نصب فریموورک لاراول</title><link href="http://localhost:4000/blog/getting-started-with-laravel/" rel="alternate" type="text/html" title="آموزش نصب فریموورک لاراول" /><published>2016-08-13T00:00:00+04:30</published><updated>2016-08-13T00:00:00+04:30</updated><id>http://localhost:4000/blog/getting-started-with-laravel</id><content type="html" xml:base="http://localhost:4000/blog/getting-started-with-laravel/">&lt;p&gt;سلام. راستش خیلی وقت بود که میخواستم بلاگم رو راه بندازم ولی متاسفانه زمان اجازه نمیداد. هدف اصلی من برای درست کردن بلاگ اینه که بتونم تجربه هام رو در زمینه برنامه نویسی در اختیار بقیه بزارم.&lt;/p&gt;
 
 &lt;p&gt;خوشحال میشم نظرهاتون رو از طریق &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#112;&amp;#101;&amp;#121;&amp;#109;&amp;#097;&amp;#110;&amp;#064;&amp;#111;&amp;#109;&amp;#105;&amp;#100;&amp;#105;&amp;#046;&amp;#109;&amp;#101;&quot; title=&quot;peyman@omidi.me&quot;&gt;ایمیل&lt;/a&gt; یا کامنت زیر هر پست بم بگید. 😊&lt;/p&gt;
 
