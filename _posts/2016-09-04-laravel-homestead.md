@@ -6,7 +6,7 @@ description: "Laravel Homestead یک pre-package از Vagrant Box هست که م
 urll: "laravel-homestead"
 excerpt: "Laravel Homestead یک pre-package از Vagrant Box هست که محیط توسعه ای در اختیار ما میگذاره که احتیاجی به نصب PHP، وب سرور یا هر نوع نرم افزار مربوط به سرور روی سیستممون نداریم. Vagrant به عنوان یک Virtual Machine کار میکنه که درون اون پکیجی از نرم افزار های مورد نیاز قرار داره "
 tags: Laravel Homestead Vagrant Composer PHP
-keywords: لاراول , فریموورک لاراول , آموزش نصب لاراول , Laravel Homestead, Vagrant, کامپوزر, نصب Composer, Composer, PHP, Laravel, Packagist, Sublime Text, VMWare, VirtualBox, SSH Key, پورت فورواردینگ, Forwarding Ports,
+keywords: لاراول , فریموورک لاراول , آموزش نصب لاراول , لاراول Homestead, Laravel Homestead, Vagrant, کامپوزر, نصب Composer, Composer, PHP, Laravel, Packagist, Sublime Text, VMWare, VirtualBox, SSH Key, پورت فورواردینگ, Forwarding Ports, پیمان امیدی, Peyman Omidi,
 comments: true
 ---
 
@@ -92,7 +92,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 بعد از باز کردن فایل، قسمت `folders` و `sites` رو مثل عکس پایین تغییر میدیم
 
 <figure>
-    <img src="/assets/img/posts-images/blog/laravel-homestead/homestead-yaml.png" alt="Edit Homestead.yaml file">
+    <img src="/assets/img/posts-images/blog/laravel-homestead/homestead-yaml.png" alt="Edit Homestead.yaml file" title="Edit Homestead.yaml file" />
 </figure>
 
 در صورتی که `SSh Key` ایجاد نکردید، از طریق این دستور میتونید این کار رو انجام بدید
@@ -119,7 +119,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 <br/>
 
 <figure>
-    <img src="/assets/img/posts-images/blog/laravel-homestead/vagrant-up.png" alt="Vagrant Up Laravel">
+    <img src="/assets/img/posts-images/blog/laravel-homestead/vagrant-up.png" alt="Vagrant Up Laravel" title="Vagrant Up Laravel" />
 </figure>
 <br/>
 
@@ -148,7 +148,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 <br/>
 
 <figure>
-    <img src="/assets/img/posts-images/blog/laravel-homestead/map-url-to-ip-address.png" alt="Mapping url to IP Address">
+    <img src="/assets/img/posts-images/blog/laravel-homestead/map-url-to-ip-address.png" alt="Mapping url to IP Address" title="Mapping url to IP Address" />
 </figure>
 <br/>
 
@@ -186,7 +186,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 منتظر میشیم تا دانلود پکیج های مورد نیاز تموم بشه. بعد از اون مرورگرومون رو باز میکنیم و `laravel.dev:8000` رو در آدرس بار وارد میکنیم 😍
 
 <figure>
-    <img src="/assets/img/posts-images/blog/laravel-homestead/laravel.png" alt="Laravel Homestead up and running">
+    <img src="/assets/img/posts-images/blog/laravel-homestead/laravel.png" alt="Laravel Homestead up and running" title="Laravel Homestead up and running" />
 </figure>
 
 همون طور که میبینیم، نسبت به روش قبل، این روش url بسیار کوتاه تر و به اصطلاح تمیزتری داره.

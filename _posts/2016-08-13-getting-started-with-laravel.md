@@ -6,7 +6,7 @@ description: "سه روش مختلف میشه لاراول رو روی سیست�
 urll: "getting-started-with-laravel"
 excerpt: "قبل از استارت کار با لاراول، اول اینو بگم که از سه روش مختلف میشه لاراول رو روی سیستم هامون نصب کنیم. دو روش اول قابل اجرا روی مک ، لینوکس و ویندوز هست و روش سوم فقط مخصوص کاربران  مک هست که چند ماه پیش منتشر شد. در هر سه روش نیاز به نصب Composer داریم. "
 tags: Laravel Composer PHP
-keywords: لاراول , فریموورک لاراول , آموزش نصب لاراول , کامپوزر, نصب Composer, Composer, PHP, Laravel, Packagist, 
+keywords: لاراول , فریموورک لاراول , آموزش نصب لاراول , کامپوزر, نصب Composer, Composer, PHP, Laravel, Packagist, پیمان امیدی, Peyman Omidi, 
 comments: true
 ---
 
@@ -84,7 +84,7 @@ Composer یک مدیریت کننده نیازمندی ها (Dependency Manager)
 
 
 <figure>
-    <img src="/assets/img/posts-images/blog/getting-started-with-laravel/laravel.png" alt="آموزش نصب لاراول">
+    <img src="/assets/img/posts-images/blog/getting-started-with-laravel/laravel.png" alt="آموزش نصب لاراول" title="آموزش نصب لاراول" />
 </figure>
 <br/>
 

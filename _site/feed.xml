@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-09-05T12:56:47+04:30</updated><id>http://localhost:4000/</id><title>Peyman Omidi</title><subtitle>Peyman Omidi | وب سایت پیمان امیدی، برنامه نویس و توسعه دهنده وب</subtitle><entry><title>راه اندازی فریموورک لاراول با استفاده از Homestead</title><link href="http://localhost:4000/blog/laravel-homestead/" rel="alternate" type="text/html" title="راه اندازی فریموورک لاراول با استفاده از Homestead" /><published>2016-09-04T00:00:00+04:30</published><updated>2016-09-04T00:00:00+04:30</updated><id>http://localhost:4000/blog/laravel-homestead</id><content type="html" xml:base="http://localhost:4000/blog/laravel-homestead/">&lt;p&gt;در &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;پست قبلی&lt;/a&gt; نحوه نصب و راه اندازی فریموورک لاراول رو از طریق نصب &lt;a href=&quot;https://getcomposer.org/&quot; target=&quot;_blank&quot;&gt;Composer&lt;/a&gt; و اجرای اون روی نرم افزار های شبیه ساز سرور مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;Wamp Server&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Xampp&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Mamp&lt;/code&gt; و … دیدیم.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-10-01T15:04:24+03:30</updated><id>http://localhost:4000/</id><title>Peyman Omidi</title><subtitle>Peyman Omidi | وب سایت پیمان امیدی، برنامه نویس و توسعه دهنده وب</subtitle><entry><title>آموزش نصب لاراول Valet</title><link href="http://localhost:4000/blog/laravel-valet/" rel="alternate" type="text/html" title="آموزش نصب لاراول Valet" /><published>2016-10-01T00:00:00+03:30</published><updated>2016-10-01T00:00:00+03:30</updated><id>http://localhost:4000/blog/laravel-valet</id><content type="html" xml:base="http://localhost:4000/blog/laravel-valet/">&lt;p&gt;احتمالا همه ما وقتی یه پروژه رو بصورت local اجرا میکنیم، دوست داریم از شر localhost نوشتن راحت بشیم و از یه آدرس کوتاه و شیک مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;app.dev&lt;/code&gt; یا شبیه این استفاده کنیم.&lt;/p&gt;
+
+&lt;p&gt;این امکان رو ابزارایی مثل &lt;a href=&quot;https://www.mamp.info/en/&quot; target=&quot;_blank&quot;&gt;Mamp&lt;/a&gt;، &lt;a href=&quot;https://www.vagrantup.com&quot; target=&quot;_blank&quot;&gt;Vagrant&lt;/a&gt; و حتی &lt;a href=&quot;http://www.wampserver.com&quot; target=&quot;_blank&quot;&gt;Wamp&lt;/a&gt; در اختیار ما میزاره ولی کمی پیچیده هست، مخصوصا وقتی برای اولین بار باشه که بخوایم اینکار رو انجام بدیم.
+مشکل پیچیدگی که این روش ها دارن اینه که همون موقع که پروژمون رو ساختیم نمیتونیم از این نوع آدرس استفاده کنیم و قبلش حتما باید تنظیمات رو بصورت دستی انجام بدیم و میتونه زمان بر باشه.&lt;/p&gt;
+
+&lt;p&gt;راه حل خیلی راحت و ساده برای این کار، استفاده از &lt;a href=&quot;https://laravel.com/docs/5.2/valet&quot; target=&quot;_blank&quot;&gt;Laravel Valet&lt;/a&gt; هست.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;a-hrefhttpslaravelcomdocs52valetinstallation-targetblanklaravel-valeta&quot;&gt;&lt;a href=&quot;https://laravel.com/docs/5.2/valet#installation&quot; target=&quot;_blank&quot;&gt;Laravel Valet&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;خب برای شروع اول از همه باید &lt;code class=&quot;highlighter-rouge&quot;&gt;Laravel Valet&lt;/code&gt; رو نصب کنیم.&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;لاراول valet فقط مخصوص کاربران &lt;code class=&quot;highlighter-rouge&quot;&gt;Mac&lt;/code&gt; هست و اگر شما کاربر ویندوز هستید میتونید از &lt;a href=&quot;https://www.vagrantup.com&quot; target=&quot;_blank&quot;&gt;Vagrant&lt;/a&gt; برای اینکار استفاده کنید و برای هر پروژه، &lt;code class=&quot;highlighter-rouge&quot;&gt;host file&lt;/code&gt; رو بصورت دستی آپدیت کنید.&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;در صورتی که &lt;a href=&quot;https://packagist.org/packages/laravel/laravel&quot; target=&quot;_blank&quot;&gt;پکیج Laravel/Laravel&lt;/a&gt; روی سیستم شما نصب نیست، پیشنهاد میکنم اول &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;آموزش نصب لاراول&lt;/a&gt; و &lt;a href=&quot;http://omidi.me/blog/laravel-homestead/&quot; target=&quot;_blank&quot;&gt;آموزش نصب لاراول با استفاده از Homestead&lt;/a&gt; رو حتما بخونید و لاراول رو روی سیستمتون نصب کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hrefhttpbrewsh-targetblankhomebrewa&quot;&gt;نصب &lt;a href=&quot;http://brew.sh&quot; target=&quot;_blank&quot;&gt;Homebrew&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;خب اول از همه ما باید &lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt; رو نصب کنیم.
+با استفاده از این دستور میتونیم &lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt; رو روی سیستممون نصب کنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt; در حقیقت یک &lt;code class=&quot;highlighter-rouge&quot;&gt;Package Manager&lt;/code&gt; برای سیستم عامل &lt;code class=&quot;highlighter-rouge&quot;&gt;Mac&lt;/code&gt; هست.&lt;/p&gt;
+
+&lt;p&gt;برای اطمینان از نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt;، دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;brew&lt;/code&gt; رو در ترمینال اجرا میکنیم. اگر مراحل نصل درست انجام شده باشه، لیستی از دستورهای قابل اجرا با &lt;code class=&quot;highlighter-rouge&quot;&gt;brew&lt;/code&gt; رو میبینیم.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-valet/brew-commands.png&quot; alt=&quot;Brew Commands&quot; title=&quot;Brew Commands&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;php7--mysql&quot;&gt;نصب PHP7 و MySQL&lt;/h2&gt;
+
+&lt;p&gt;بعد از نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt;، نوبت به نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP7&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt; هست.
+برای نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP7&lt;/code&gt; دستور زیر رو اجرا میکنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    brew install homebrew/php/php70&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;موردی که ممکنه حین انجام کار روی پروژه هامون باهاش مواجه بشیم، ارور مربوط به &lt;code class=&quot;highlighter-rouge&quot;&gt;mcrypt&lt;/code&gt; هست که به دلیل نصب نبودن روی سیستمه.&lt;/p&gt;
+
+&lt;p&gt;برای نصب افزونه &lt;code class=&quot;highlighter-rouge&quot;&gt;mcrypt&lt;/code&gt; این دستور رو اجرا میکنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    brew install homebrew/php/php70-mcrypt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p class=&quot;notice&quot;&gt;mcrypt در حقیقت جایگزین دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;crypt&lt;/code&gt; در &lt;code class=&quot;highlighter-rouge&quot;&gt;Unix&lt;/code&gt; شده که وظیفه &lt;code class=&quot;highlighter-rouge&quot;&gt;Encrypt&lt;/code&gt; کردن فایل رو داشت. در واقع mcrypt هم همون کار رو میکنه ولی با الگوریتم های جدیدی مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;AES&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;در صورتی که دوست دارین لیست افزونه های بیشتری رو برای PHP7 ببینید، از این دستور استفاده کنید.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    brew search php7&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;برای نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt; هم این دستور رو در ترمینال اجرا میکنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    brew install mysql&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;خب مرحله بعد نصب Laravel Valet هست که باید از طریق &lt;code class=&quot;highlighter-rouge&quot;&gt;Composer&lt;/code&gt; اینکار رو انجام بدیم.
+شما میتونید آموزش نصب &lt;a href=&quot;https://getcomposer.org&quot; target=&quot;_blank&quot;&gt;Composer&lt;/a&gt; رو از &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;اینجا&lt;/a&gt; بخونید.&lt;/p&gt;
+
+&lt;p&gt;بعد از نصب Composer، از طریق این دستور، &lt;a href=&quot;https://packagist.org/packages/laravel/valet&quot; target=&quot;_blank&quot;&gt;پکیج Laravel/Valet&lt;/a&gt; رو دانلود و نصب میکنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    composer global require laravel/valet=~1.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;بعد از نصب valet بصورت global دستور زیر رو اجرا میکنیم،&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    valet install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;خب حالا بعد از نصب valet نیاز داریم یک دایرکتوری مشخص کنیم که همه پروژه هامون که قراره روی valet اجرا بشه در این دایرکتوری قرار داشته باشه.
+من به شخصه همونطور که توی دو پست قبل گفتم، در &lt;code class=&quot;highlighter-rouge&quot;&gt;home directory&lt;/code&gt; یک دایرکتوری &lt;code class=&quot;highlighter-rouge&quot;&gt;www&lt;/code&gt; دارم که همه پروژهام در اون قرار داره. حالا یک دایرکتوری جدید بنام &lt;code class=&quot;highlighter-rouge&quot;&gt;valet&lt;/code&gt; در &lt;code class=&quot;highlighter-rouge&quot;&gt;www&lt;/code&gt; میسازم که همه پروژه هایی که قراره روی valet اجرا بشه، اینجا قرار داشته باشه.&lt;/p&gt;
+
+&lt;p&gt;حالا باید این دایرکتوری که برای پروژمون مشخص کردیم رو به valet بشناسونیم یا به اصطلاح این دایرکتوری رو روی valet &lt;code class=&quot;highlighter-rouge&quot;&gt;پارک&lt;/code&gt; کنیم.
+قبل از اجرای دستور پایین باید وارد دایرکتوری مورد نظرمون بشیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    valet park&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;حالا توی همون دایرکتوری یک پروژه جدید با لاراول به اسم &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; ایجاد میکنیم.
+دقت کنید هر اسمی که برای پروژمون تعریف کنیم، به عنوان دامین استفاده میشه.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    laravel new app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;بعد از ایجاد پروژه جدید، وارد مرورگر مشیم و آدرس &lt;code class=&quot;highlighter-rouge&quot;&gt;app.dev&lt;/code&gt; رو وارد میکنیم.
+به همین راحتی 😍&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-valet/laravel-valet.png&quot; alt=&quot;Laravel Valet&quot; title=&quot;Laravel Valet&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;استفاده از دامین دیگر&lt;/h1&gt;
+
+&lt;p&gt;بصورت پیشفرض، valet روی domain extension &lt;code class=&quot;highlighter-rouge&quot;&gt;.dev&lt;/code&gt; اجرا میشود. در صورتی که بخوایم میتونیم با استفاده از دستور زیر، از domain extension مورد نظرمون استفاده کنیم که برای مثال در این دستور به &lt;code class=&quot;highlighter-rouge&quot;&gt;.app&lt;/code&gt; تغییر میدیم. شما میتونین بجای &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; از هر کلمه ای استفاده کنید.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    valet domain app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;ssl&quot;&gt;استفاده از 🔒 SSL&lt;/h1&gt;
+
+&lt;p&gt;با استفاده از این دستور میتونیم سایت رو از طریق &lt;code class=&quot;highlighter-rouge&quot;&gt;SSL&lt;/code&gt; اجرا کنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    valet secure app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;که &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; در اینجا نام دایرکتوری پروژمون هست.&lt;/p&gt;
+
+&lt;p&gt;برای بازگرداندن به حالت قبل یا استفاده از HTTP میتونیم از این دستور استفاده کنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    valet unsecure app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;a-hrefhttpslaravelcomdocs52valetsharing-sites-targetblank---a&quot;&gt;&lt;a href=&quot;https://laravel.com/docs/5.2/valet#sharing-sites&quot; target=&quot;_blank&quot;&gt;به اشتراک گذاری پروژه&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;یکی از قابلیت های فوق العاده valet، امکان اشتراک گذاری پروژه هست.
+برای استفاده از این امکان، وارد دایرکتوری پروژمون میشیم و این دستور رو اجرا میکنیم.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;    valet share&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-valet/sharing-sites.png&quot; alt=&quot;Laravel Valet Sharing Sites&quot; title=&quot;Laravel Valet Sharing Sites&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;همونطور که در عکس هم میبینیم. در قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;forwarding&lt;/code&gt; آدرسی در اختیار ما قرار میگیره که میتونیم این آدرس رو به اشتراک بگذاریم.
+فقط با یه دستور ساده بقیه میتونن پروژه ای که بصورت local روی سیستم اجرا شده رو ببینن !!!&lt;/p&gt;
+
+&lt;p&gt;واقعا فوق العاده نیست ؟!! 😍&lt;/p&gt;</content><category term="Laravel" /><category term="Valet" /><category term="Homebrew" /><summary>احتمالا همه ما وقتی یه پروژه رو بصورت local اجرا میکنیم، دوست داریم از شر localhost نوشتن راحت بشیم و از یه آدرس کوتاه و شیک مثل app.dev یا شبیه این استفاده کنیم.</summary></entry><entry><title>راه اندازی فریموورک لاراول با استفاده از Homestead</title><link href="http://localhost:4000/blog/laravel-homestead/" rel="alternate" type="text/html" title="راه اندازی فریموورک لاراول با استفاده از Homestead" /><published>2016-09-04T00:00:00+04:30</published><updated>2016-09-04T00:00:00+04:30</updated><id>http://localhost:4000/blog/laravel-homestead</id><content type="html" xml:base="http://localhost:4000/blog/laravel-homestead/">&lt;p&gt;در &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;پست قبلی&lt;/a&gt; نحوه نصب و راه اندازی فریموورک لاراول رو از طریق نصب &lt;a href=&quot;https://getcomposer.org/&quot; target=&quot;_blank&quot;&gt;Composer&lt;/a&gt; و اجرای اون روی نرم افزار های شبیه ساز سرور مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;Wamp Server&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Xampp&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;Mamp&lt;/code&gt; و … دیدیم.
 در این پست آموزش راه اندازی فریموورک لاراول رو بوسیله &lt;a href=&quot;https://laravel.com/docs/5.3/homestead&quot; target=&quot;_blank&quot;&gt;Homestead&lt;/a&gt; یاد میگیریم. قبل از ادامه خوندن این پست، مطمئن بشین که &lt;code class=&quot;highlighter-rouge&quot;&gt;Composer&lt;/code&gt; روی سیستمتون نصب هست.&lt;/p&gt;
 
 &lt;p&gt;آموزش نصب &lt;code class=&quot;highlighter-rouge&quot;&gt;composer&lt;/code&gt; رو میتونین از &lt;a href=&quot;http://omidi.me/blog/getting-started-with-laravel/&quot; target=&quot;_blank&quot;&gt;اینجا&lt;/a&gt; بخونید.&lt;/p&gt;
@@ -61,7 +191,7 @@
 &lt;p&gt;بعد از باز کردن فایل، قسمت &lt;code class=&quot;highlighter-rouge&quot;&gt;folders&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;sites&lt;/code&gt; رو مثل عکس پایین تغییر میدیم&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/homestead-yaml.png&quot; alt=&quot;Edit Homestead.yaml file&quot; /&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/homestead-yaml.png&quot; alt=&quot;Edit Homestead.yaml file&quot; title=&quot;Edit Homestead.yaml file&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;در صورتی که &lt;code class=&quot;highlighter-rouge&quot;&gt;SSh Key&lt;/code&gt; ایجاد نکردید، از طریق این دستور میتونید این کار رو انجام بدید&lt;/p&gt;
@@ -79,7 +209,7 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/vagrant-up.png&quot; alt=&quot;Vagrant Up Laravel&quot; /&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/vagrant-up.png&quot; alt=&quot;Vagrant Up Laravel&quot; title=&quot;Vagrant Up Laravel&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -104,7 +234,7 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/map-url-to-ip-address.png&quot; alt=&quot;Mapping url to IP Address&quot; /&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/map-url-to-ip-address.png&quot; alt=&quot;Mapping url to IP Address&quot; title=&quot;Mapping url to IP Address&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -129,7 +259,7 @@
 &lt;p&gt;منتظر میشیم تا دانلود پکیج های مورد نیاز تموم بشه. بعد از اون مرورگرومون رو باز میکنیم و &lt;code class=&quot;highlighter-rouge&quot;&gt;laravel.dev:8000&lt;/code&gt; رو در آدرس بار وارد میکنیم 😍&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/laravel.png&quot; alt=&quot;Laravel Homestead up and running&quot; /&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/laravel-homestead/laravel.png&quot; alt=&quot;Laravel Homestead up and running&quot; title=&quot;Laravel Homestead up and running&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;همون طور که میبینیم، نسبت به روش قبل، این روش url بسیار کوتاه تر و به اصطلاح تمیزتری داره.&lt;/p&gt;
@@ -198,7 +328,7 @@
 &lt;p&gt;در صورتی که مراحل رو درست رفته باشید، باید این صفحه رو ببینید&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/img/posts-images/blog/getting-started-with-laravel/laravel.png&quot; alt=&quot;آموزش نصب لاراول&quot; /&gt;
+    &lt;img src=&quot;/assets/img/posts-images/blog/getting-started-with-laravel/laravel.png&quot; alt=&quot;آموزش نصب لاراول&quot; title=&quot;آموزش نصب لاراول&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
